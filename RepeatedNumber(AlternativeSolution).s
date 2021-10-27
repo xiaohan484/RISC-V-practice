@@ -1,6 +1,6 @@
 .data
-nums: .word 5,1,5,2,5,3,5,4
-numsSize: .word 8
+nums: .word 1,2,3,3
+numsSize: .word 4
 str1: .string "["
 str2: .string "]\n"
 str3: .string " "
@@ -81,7 +81,7 @@ CheckFor:
     beq t3,t4,ReturnAns
     beq t3,t5,ReturnAns
     addi t0,t0,1 #endFor i++
-    blt t0,a3,CheckFor #Check i<numsSize
+    blt t0,a2,CheckFor #Check i<numsSize
 ReturnAns:
     add a0,t3,zero
     jr ra
